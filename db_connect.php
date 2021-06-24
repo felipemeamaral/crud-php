@@ -9,7 +9,7 @@
 
 $query = "CREATE TABLE IF NOT EXISTS Alunos (idAluno int, ra int, nome STRING, idCurso int)";
 
-$query2 = "CREATE TABLE IF NOT EXISTS Curso (idCurso int, nomeCurso STRING)";
+$query2 = "CREATE TABLE IF NOT EXISTS Cursos (idCurso int, nomeCurso STRING)";
 
 $db->exec($query);
 $db->exec($query2);

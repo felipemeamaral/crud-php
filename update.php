@@ -14,7 +14,7 @@ if( isset($_POST['enviar_dados']) ){
 	$idCurso = $_POST['email'];
 
 	// Executa a query com post dados
-	$query = "UPDATE aluno set idAluno='$idAluno', ra='$ra', nome='$nome', idCurso='$idCurso' WHERE rowid=$id";
+	$query = "UPDATE Alunos set idAluno='$idAluno', ra='$ra', nome='$nome', idCurso='$idCurso' WHERE rowid=$id";
 	
 	// Executa a query
 	// Se os dados foram inseridos com sucesso mostra a mensagem, senão, mostra a mensagem de erro
