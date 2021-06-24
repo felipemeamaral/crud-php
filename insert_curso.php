@@ -9,7 +9,7 @@
 	    $nomeCurso = $_POST['nomeCurso'];
 	 
 	    // Chama a query com um post
-	    $query = "INSERT INTO Curso (idCurso, nomeCurso) VALUES ('$idCurso', '$nomeCurso')";
+	    $query = "INSERT INTO Cursos (idCurso, nomeCurso) VALUES ('$idCurso', '$nomeCurso')";
 	     
 	    // Executa a query
 	    // Mostra mensagem de sucesso ou ero ao inserir os dados
@@ -41,7 +41,7 @@
 				<td>NomeCurso:</td>
 				<td><input name="nomeCurso" type="text"></td>
 			</tr>
-				<td><a href="list.php">Ver Dados</a></td>
+				<td><a href="list.php">Voltar</a></td>
 				<td><input name="enviar_dados" type="submit" value="Inserir Dados"></td>
 			</tr>
 			</form>

@@ -8,13 +8,11 @@ include "db_connect.php";
 if( isset($_POST['enviar_dados']) ){
 
 	// Pega os dados do post
-	$idAluno = $_POST['id'];
-	$ra = $_POST['id'];
-	$nome = $_POST['name'];
-	$idCurso = $_POST['email'];
+	$idCurso = $_POST['idCurso'];
+	$nomeCurso = $_POST['nomeCurso'];
 
 	// Executa a query com post dados
-	$query = "UPDATE aluno set idAluno='$idAluno', ra='$ra', nome='$nome', idCurso='$idCurso' WHERE rowid=$id";
+	$query = "UPDATE Cursos set idCurso='$idCurso', nomeCurso='$nomeCurso' WHERE rowid=$id";
 	
 	// Executa a query
 	// Se os dados foram inseridos com sucesso mostra a mensagem, senão, mostra a mensagem de erro
@@ -28,7 +26,7 @@ if( isset($_POST['enviar_dados']) ){
 
 $id = $_GET['id']; // pega rowid da url
 // Prepara a query para os dados da linha pelo rowid
-$query = "SELECT rowid, * FROM alunos WHERE rowid=$id";
+$query = "SELECT rowid, * FROM Cursos WHERE rowid=$id";
 $resultado = $db->query($query);
 $dados = $resultado->fetchArray(); // set the row in $dados
 ?>
@@ -48,20 +46,12 @@ $dados = $resultado->fetchArray(); // set the row in $dados
 			<form action="" method="post">
 			<input type="hidden" name="id" value="<?php echo $id;?>">
 			<tr>
-				<td>idALuno:</td>
-				<td><input name="idAluno" type="text" value="<?php echo $dados['idAluno'];?>"></td>
-			</tr>
-			<tr>
-				<td>RA:</td>
-				<td><input name="ra" type="text" value="<?php echo $dados['ra'];?>"></td>
-			</tr>
-			<tr>
-				<td>Nome:</td>
-				<td><input name="nome" type="text" value="<?php echo $dados['nome'];?>"></td>
-			</tr>
-			<tr>
 				<td>idCurso:</td>
 				<td><input name="idCurso" type="text" value="<?php echo $dados['idCurso'];?>"></td>
+			</tr>
+			<tr>
+				<td>nomeCurso:</td>
+				<td><input name="nomeCurso" type="text" value="<?php echo $dados['idCurso'];?>"></td>
 			</tr>
 			<tr>
 				<td><a href="list.php">Voltar</a></td>

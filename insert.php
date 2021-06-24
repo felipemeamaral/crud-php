@@ -8,13 +8,13 @@ include "db_connect.php";
 	    include "db_connect.php";
 	 
 	    // Gets the data from post
-	    $idALuno = $_POST['idAluno'];
+	    $idAluno = $_POST['idAluno'];
 	    $ra = $_POST['ra'];
 	    $nome = $_POST['nome'];
 	    $idCurso = $_POST['idCurso'];
 	 
 	    // Chama a query com um post
-	    $query = "INSERT INTO Alunos (idAluno, ra, nome, idCurso) VALUES ('$ra', '$nome', '$idCurso')";
+	    $query = "INSERT INTO Alunos (idAluno, ra, nome, idCurso) VALUES ('$idAluno', '$ra', '$nome', '$idCurso')";
 	     
 	    // Executa a query
 	    // Mostra mensagem de sucesso ou ero ao inserir os dados
@@ -38,6 +38,10 @@ include "db_connect.php";
 
 		<table width="100%" cellpadding="5" cellspacing="1" border="1">
 			<form action="insert.php" method="post">
+      <tr>
+				<td>idAluno:</td>
+				<td><input name="idAluno" type="text"></td>
+			</tr>
 			<tr>
 				<td>RA:</td>
 				<td><input name="ra" type="text"></td>
@@ -51,7 +55,7 @@ include "db_connect.php";
 				<td><input name="idCurso" type="text"></td>
 			</tr>
 			<tr>
-				<td><a href="list.php">Ver Dados</a></td>
+				<td><a href="list.php">Voltar</a></td>
 				<td><input name="enviar_dados" type="submit" value="Inserir Dados"></td>
 			</tr>
 			</form>

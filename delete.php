@@ -3,10 +3,10 @@
 // Inclui conexão com o banco
 include "db_connect.php";
 
-$id = $_GET['id']; // pega o row id da url
+$idAluno = $_GET['idAluno']; // pega o row id da url
 
 // Preparar para remover os dados de acordo com o rowid
-$query = "DELETE FROM Aluno WHERE rowid=$id";
+$query = "DELETE FROM Aluno WHERE idAluno=$idAluno";
 
 // Executa a query para remover o dado
 if( $db->query($query) ){

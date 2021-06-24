@@ -7,9 +7,9 @@
 	
   // Criar tabela alunos e curso caso não exista
 
-$query = "CREATE TABLE IF NOT EXISTS Alunos (idAluno int NOT NULL, ra NUMBER NOT NULL, nome STRING NOT NULL, idCurso NUMBER)";
+$query = "CREATE TABLE IF NOT EXISTS Alunos (idAluno int, ra int, nome STRING, idCurso int)";
 
-$query2 = "CREATE TABLE IF NOT EXISTS Curso (idCurso int NOT NULL, nomeCurso STRING NOT NULL)";
+$query2 = "CREATE TABLE IF NOT EXISTS Curso (idCurso int, nomeCurso STRING)";
 
 $db->exec($query);
 $db->exec($query2);

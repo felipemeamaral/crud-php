@@ -6,6 +6,7 @@ include "db_connect.php";
 // faz a query com o rowid
 $query = "SELECT rowid, * FROM Alunos";
 
+
 // Roda a a query e salva o resultado para $resultado
 $resultado = $db->query($query);
 
@@ -42,7 +43,7 @@ $resultado = $db->query($query);
 	</div>
 
   <div style="width: 500px; margin: 20px auto;">
-		<a href="insert.php">Adicionar Curso</a>
+		<a href="insert_curso.php">Adicionar Curso</a>
 		<table width="100%" cellpadding="5" cellspacing="1" border="1">
 			<tr>
 				<td>idCurso</td>
